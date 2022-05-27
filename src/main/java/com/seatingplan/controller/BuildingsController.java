@@ -48,22 +48,15 @@ public class BuildingsController {
 		return ResponseEntity.ok(Buildings);
 	}
 	
-	@PutMapping("/Buildings/{buildingId}/{buildingName}")
-	public ResponseEntity<Buildings> updateBuildingName(@PathVariable("buildingId") long buildingId, @PathVariable("buildingName") String buildingName, @RequestBody Buildings BuildingsDetails){
-		Buildings Buildings = BuildingRepository.findbyUpdataBuilding(buildingId,buildingName);
-		Buildings.setBuildingName(BuildingsDetails.buildingName);
+
+	@PutMapping("/Buildings/{id}")
+	public ResponseEntity<Buildings> updateBuildings(@PathVariable Long id, @RequestBody Buildings BuildingsDetails) {
+		Buildings Buildings = BuildingRepository.findById(id).orElseThrow();
+		Buildings.setBuildingName(BuildingsDetails.buildingName);	
+		Buildings.setStatus(BuildingsDetails.status);
 		Buildings updatedBuildings = BuildingRepository.save(Buildings);
 		return ResponseEntity.ok(updatedBuildings);
 	}
-
-//	@PutMapping("/Buildings/{id}")
-//	public ResponseEntity<Buildings> updateBuildings(@PathVariable Long id, @RequestBody Buildings BuildingsDetails) {
-//		Buildings Buildings = BuildingRepository.findById(id).orElseThrow();
-//		Buildings.setBuildingName(BuildingsDetails.buildingName);	
-//		Buildings.setStatus(BuildingsDetails.status);
-//		Buildings updatedBuildings = BuildingRepository.save(Buildings);
-//		return ResponseEntity.ok(updatedBuildings);
-//	}
 
 	@DeleteMapping("/Buildings/{id}")
 	public ResponseEntity<Map<String, Boolean>> deleteBuildings(@PathVariable Long id) {
