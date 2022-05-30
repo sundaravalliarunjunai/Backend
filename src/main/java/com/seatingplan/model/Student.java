@@ -29,8 +29,8 @@ public class Student {
 	@Column(name = "dob")
 	public String dob;
 	
-	@Column(name = "regNo")
-	public String regNo;
+	@Column(name = "rollNo")
+	public String rollNo;
 	
 	@Column(name = "departmentId")
 	public long departmentId;
@@ -71,12 +71,12 @@ public class Student {
 		this.dob = dob;
 	}
 
-	public String getRegNo() {
-		return regNo;
+	public String getRollNo() {
+		return rollNo;
 	}
 
-	public void setRegNo(String regNo) {
-		this.regNo = regNo;
+	public void setRollNo(String rollNo) {
+		this.rollNo = rollNo;
 	}
 
 	public long getDepartmentId() {

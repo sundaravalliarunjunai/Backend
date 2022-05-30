@@ -23,6 +23,9 @@ public class Subject {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public long subjectId;
 	
+	@Column(name = "courseCode")
+	public String courseCode;
+	
 	@Column(name = "subjectName")
 	public String subjectName;
 	
@@ -47,6 +50,14 @@ public class Subject {
 
 	public void setSubjectId(long subjectId) {
 		this.subjectId = subjectId;
+	}
+	
+	public String getCourseCode() {
+		return courseCode;
+	}
+
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
 	}
 
 	public String getSubjectName() {

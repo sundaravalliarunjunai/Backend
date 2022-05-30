@@ -48,7 +48,7 @@ public class StudentController {
 		Student Student = StudentRepository.findById(id).orElseThrow();
 		Student.setStudentName(StudentDetails.studentName);	
 		Student.setDob(StudentDetails.dob);
-		Student.setRegNo(StudentDetails.regNo);
+		Student.setRollNo(StudentDetails.rollNo);
 		Student.setDepartmentId(StudentDetails.departmentId);
 		Student.setSemester(StudentDetails.semester);
 		Student.setCourseType(StudentDetails.courseType);

@@ -46,6 +46,7 @@ public class SubjectController {
 	@PutMapping("/Subject/{id}")
 	public ResponseEntity<Subject> updateSubject(@PathVariable Long id, @RequestBody Subject SubjectDetails) {
 		Subject Subject = SubjectRepository.findById(id).orElseThrow();
+		Subject.setCourseCode(SubjectDetails.courseCode);
 		Subject.setSubjectName(SubjectDetails.subjectName);	
 		Subject.setSemester(SubjectDetails.semester);
 		Subject.setDepartment(SubjectDetails.department);
