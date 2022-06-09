@@ -61,4 +61,13 @@ public class ExamDateAndTimeController {
 		response.put("deleted", Boolean.TRUE);
 		return ResponseEntity.ok(response);
 	}
+	
+//	@DeleteMapping("/ExamDateAndTime/{examDateID}")
+//	public ResponseEntity<Map<String, Boolean>> deleteExamDateAndTime1(@PathVariable Long id) {
+//		ExamDateAndTime ExamDateAndTime = ExamDateAndTimeRepository.findById(id).orElseThrow();
+//		ExamDateAndTimeRepository.delete(ExamDateAndTime);
+//		Map<String, Boolean> response = new HashMap<>();
+//		response.put("deleted", Boolean.TRUE);
+//		return ResponseEntity.ok(response);
+//	}
 }
