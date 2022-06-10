@@ -33,7 +33,7 @@ public class Subject {
 	public String semester;
 	
 	@Column(name = "department")
-	public String department;
+	public long department;
 	
 	@Column(name = "courseType")
 	public String courseType;
@@ -76,11 +76,11 @@ public class Subject {
 		this.semester = semester;
 	}
 
-	public String getDepartment() {
+	public long getDepartment() {
 		return department;
 	}
 
-	public void setDepartment(String department) {
+	public void setDepartment(long department) {
 		this.department = department;
 	}
 

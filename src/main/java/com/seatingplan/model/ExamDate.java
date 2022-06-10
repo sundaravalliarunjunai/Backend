@@ -26,6 +26,9 @@ public class ExamDate {
 	@Column(name = "date")
 	public String date;
 	
+	@Column(name = "examNoonType")
+	public String examNoonType;
+	
 	@Column(name = "foreNoonStartingTime")
 	public String foreNoonStartingTime;
 	
@@ -60,35 +63,43 @@ public class ExamDate {
 		this.date = date;
 	}
 
-	public String getforeNoonStartingTime() {
+	public String getExamNoonType() {
+		return examNoonType;
+	}
+
+	public void setExamNoonType(String examNoonType) {
+		this.examNoonType = examNoonType;
+	}
+
+	public String getForeNoonStartingTime() {
 		return foreNoonStartingTime;
 	}
 
-	public void setforeNoonStartingTime(String foreNoonStartingTime) {
+	public void setForeNoonStartingTime(String foreNoonStartingTime) {
 		this.foreNoonStartingTime = foreNoonStartingTime;
 	}
 
-	public String getforeNoonEndingTime() {
+	public String getForeNoonEndingTime() {
 		return foreNoonEndingTime;
 	}
 
-	public void setforeNoonEndingTime(String foreNoonEndingTime) {
+	public void setForeNoonEndingTime(String foreNoonEndingTime) {
 		this.foreNoonEndingTime = foreNoonEndingTime;
 	}
 
-	public String getafterNoonStartingTime() {
+	public String getAfterNoonStartingTime() {
 		return afterNoonStartingTime;
 	}
 
-	public void setafterNoonStartingTime(String afterNoonStartingTime) {
+	public void setAfterNoonStartingTime(String afterNoonStartingTime) {
 		this.afterNoonStartingTime = afterNoonStartingTime;
 	}
 
-	public String getafterNoonEndingTime() {
+	public String getAfterNoonEndingTime() {
 		return afterNoonEndingTime;
 	}
 
-	public void setafterNoonEndingTime(String afterNoonEndingTime) {
+	public void setAfterNoonEndingTime(String afterNoonEndingTime) {
 		this.afterNoonEndingTime = afterNoonEndingTime;
 	}
 

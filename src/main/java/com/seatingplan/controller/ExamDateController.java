@@ -47,10 +47,11 @@ public class ExamDateController {
 	public ResponseEntity<ExamDate> updateExamDate(@PathVariable Long id, @RequestBody ExamDate ExamDateDetails) {
 		ExamDate ExamDate = ExamDateRepository.findById(id).orElseThrow();
 		ExamDate.setDate(ExamDateDetails.date);	
-		ExamDate.setforeNoonStartingTime(ExamDateDetails.foreNoonStartingTime);
-		ExamDate.setforeNoonEndingTime(ExamDateDetails.foreNoonEndingTime);
-		ExamDate.setafterNoonStartingTime(ExamDateDetails.afterNoonStartingTime);
-		ExamDate.setafterNoonEndingTime(ExamDateDetails.afterNoonEndingTime);
+		ExamDate.setExamNoonType(ExamDateDetails.examNoonType);
+		ExamDate.setForeNoonStartingTime(ExamDateDetails.foreNoonStartingTime);
+		ExamDate.setForeNoonEndingTime(ExamDateDetails.foreNoonEndingTime);
+		ExamDate.setAfterNoonStartingTime(ExamDateDetails.afterNoonStartingTime);
+		ExamDate.setAfterNoonEndingTime(ExamDateDetails.afterNoonEndingTime);
 		ExamDate updatedExamDate = ExamDateRepository.save(ExamDate);
 		return ResponseEntity.ok(updatedExamDate);
 	}
