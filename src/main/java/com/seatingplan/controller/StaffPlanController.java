@@ -60,4 +60,11 @@ public class StaffPlanController {
 		response.put("deleted", Boolean.TRUE);
 		return ResponseEntity.ok(response);
 	}
+	
+//	@DeleteMapping("/StaffPlan")
+//	public List<StaffPlan>deleteAllStaffPlan(){
+//		StaffPlanRepository.deleteAll();
+//		response.put("deleted",Boolean.TRUE);
+//		return ResponseEntity.ok(response);
+//	}
 }
